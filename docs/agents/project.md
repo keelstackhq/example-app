@@ -1,8 +1,47 @@
-# Project notes
+# Project notes: hull-canary
 
-Notes for AI agents that are specific to this repository. `CLAUDE.md` imports this file; edit it
-freely, template updates never touch it.
+Canary repo for keelstackhq/hull, hosted at keelstackhq/example-app (stands in for the doc's
+suggested keelstackhq/hull-canary): rendered from hull's template (web combo) to measure CI
+against the budget and catch template bugs. It holds no product code; keep changes minimal.
 
-- What this project is:
-- Commands beyond `pnpm check` and `pnpm run ci`:
-- Conventions and decisions:
+- Source: keelstackhq/hull@efc8d9e, `node scripts/render.mjs new … --piece base
+  --piece preact-app:web --piece ui-storybook --piece hono-worker:api --data scope=keelstackhq`
+- Budget: job `ci` p50 <= 45 s on a typical PR (warm), <= 15 s docs-only. `ci-ok` is the only
+  required check.
+- Setup instructions: doc "Set up a repo from hull"
+  (https://claude.ai/code/artifact/5cded5ba-c915-4680-b9c6-a206522e3041).
+
+## How to work here
+
+- Start every task with superpowers:using-superpowers; follow the skills it names.
+- Subagents (see CLAUDE.md): `explorer` for searches, `implementer` for changes (test first),
+  `reviewer` on every diff before commit, `ci-fixer` for red CI. Reports <= 10 lines.
+- Before "done": superpowers:verification-before-completion with real output (`pnpm run ci`,
+  the PR's CI run). A failure: superpowers:systematic-debugging, root cause first.
+- Never skip, disable or weaken a check; never edit template-owned files (CLAUDE.md, .claude/,
+  .github/, configs) to get green. A template bug is reported to hull, not patched here.
+- Test PRs are minimal one-line edits; merge only when `ci-ok` is green.
+
+## Steps
+
+- [x] 1 Render web combo, single vite ok
+- [x] 2 project.md written, `pnpm run ci` green locally, main pushed
+- [ ] 3 GitHub settings (branch protection on ci-ok, Renovate, optional Cloudflare secrets)
+- [ ] 4 First CI run on main green
+- [ ] 5 PR docs only (expect early exit, <= 15 s)
+- [ ] 6 PR one package: apps/web (expect web only, <= 45 s)
+- [ ] 7 PR shared UI: packages/ui (expect ui + web)
+- [ ] 8 PR root config: vite.config.ts (expect all packages)
+- [ ] 9 ci-timing.mjs --budget 45: n / p50 / p90 recorded
+- [ ] 10 Report sent (doc comment + final message)
+
+## Progress
+
+<!-- one line per step: YYYY-MM-DD · step · link · result · seconds -->
+
+- 2026-10-15 · 1 · keelstackhq/hull@efc8d9e · render ok:true, exit 0, 66 changes; `ok: single vite (@voidzero-dev/vite-plus-core@1.1.0)` (Node 24.22.0, pnpm 12.11.2) · install 12.6 s
+- 2026-10-15 · 2 · https://github.com/keelstackhq/example-app (main) · project.md written; `pnpm run ci` exit 0, 21/21 tasks, cold · 12.6 s
+
+## Blocked
+
+<!-- what is missing and the exact action a human must take -->
