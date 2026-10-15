@@ -8,5 +8,9 @@ export interface ButtonProps {
 }
 
 export function Button({ label, onClick, children }: ButtonProps) {
-  return <CascivoButton onClick={onClick}>{children ?? label}</CascivoButton>;
+  return (
+    <CascivoButton onClick={onClick} title={children ? label : undefined}>
+      {children ?? label}
+    </CascivoButton>
+  );
 }
