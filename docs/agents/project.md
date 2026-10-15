@@ -30,7 +30,7 @@ against the budget and catch template bugs. It holds no product code; keep chang
 - [x] 4 First CI run on main green
 - [x] 5 PR docs only (expect early exit, <= 15 s)
 - [x] 6 PR one package: apps/web (expect web only, <= 45 s)
-- [ ] 7 PR shared UI: packages/ui (expect ui + web)
+- [x] 7 PR shared UI: packages/ui (expect ui + web)
 - [ ] 8 PR root config: vite.config.ts (expect all packages)
 - [ ] 9 ci-timing.mjs --budget 45: n / p50 / p90 recorded
 - [ ] 10 Report sent (doc comment + final message)
@@ -45,6 +45,7 @@ against the budget and catch template bugs. It holds no product code; keep chang
 - 2026-10-15 · 4 · https://github.com/keelstackhq/example-app/actions/runs/38796201776 · green, full run (no base) · ci 47 s, ci-ok 3 s
 - 2026-10-15 · 5 · https://github.com/keelstackhq/example-app/pull/1 · green, early exit (affected check 7 s, rest skipped); 1 s over budget, the time is in npx downloading turbo for "query affected" · ci 16 s, ci-ok 3 s
 - 2026-10-15 · 6 · https://github.com/keelstackhq/example-app/pull/2 · green, matched: scope // + web only (//#format:check from docs/**), 7 tasks, 1 cached, turbo 6.9 s · ci 34 s, ci-ok 5 s
+- 2026-10-15 · 7 · https://github.com/keelstackhq/example-app/pull/3 · green, matched: scope // + ui + web, 11 tasks, 2 cached, turbo 6.6 s · ci 29 s, ci-ok 3 s
 
 ## Blocked
 
