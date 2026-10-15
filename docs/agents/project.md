@@ -31,9 +31,9 @@ against the budget and catch template bugs. It holds no product code; keep chang
 - [x] 5 PR docs only (expect early exit, <= 15 s)
 - [x] 6 PR one package: apps/web (expect web only, <= 45 s)
 - [x] 7 PR shared UI: packages/ui (expect ui + web)
-- [ ] 8 PR root config: vite.config.ts (expect all packages)
-- [ ] 9 ci-timing.mjs --budget 45: n / p50 / p90 recorded
-- [ ] 10 Report sent (doc comment + final message)
+- [x] 8 PR root config: vite.config.ts (expect all packages)
+- [x] 9 ci-timing.mjs --budget 45: n / p50 / p90 recorded
+- [x] 10 Report sent (doc comment + final message)
 
 ## Progress
 
@@ -46,6 +46,9 @@ against the budget and catch template bugs. It holds no product code; keep chang
 - 2026-10-15 · 5 · https://github.com/keelstackhq/example-app/pull/1 · green, early exit (affected check 7 s, rest skipped); 1 s over budget, the time is in npx downloading turbo for "query affected" · ci 16 s, ci-ok 3 s
 - 2026-10-15 · 6 · https://github.com/keelstackhq/example-app/pull/2 · green, matched: scope // + web only (//#format:check from docs/**), 7 tasks, 1 cached, turbo 6.9 s · ci 34 s, ci-ok 5 s
 - 2026-10-15 · 7 · https://github.com/keelstackhq/example-app/pull/3 · green, matched: scope // + ui + web, 11 tasks, 2 cached, turbo 6.6 s · ci 29 s, ci-ok 3 s
+- 2026-10-15 · 8 · https://github.com/keelstackhq/example-app/pull/4 · green, matched: all 5 packages, 21 tasks, 0 cached, turbo 18.1 s · ci 51 s, ci-ok 4 s
+- 2026-10-15 · 9 · hull scripts/ci-timing.mjs --repo keelstackhq/example-app --budget 45 --limit 20 · n=4 p50=29s p90=51s, ok (exit 0) · -
+- 2026-10-15 · 10 · https://claude.ai/code/artifact/5cded5ba-c915-4680-b9c6-a206522e3041 · report posted as a doc comment · -
 
 ## Blocked
 
