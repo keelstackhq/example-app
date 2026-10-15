@@ -28,7 +28,7 @@ against the budget and catch template bugs. It holds no product code; keep chang
 - [x] 2 project.md written, `pnpm run ci` green locally, main pushed
 - [ ] 3 GitHub settings (branch protection on ci-ok, Renovate, optional Cloudflare secrets)
 - [x] 4 First CI run on main green
-- [ ] 5 PR docs only (expect early exit, <= 15 s)
+- [x] 5 PR docs only (expect early exit, <= 15 s)
 - [ ] 6 PR one package: apps/web (expect web only, <= 45 s)
 - [ ] 7 PR shared UI: packages/ui (expect ui + web)
 - [ ] 8 PR root config: vite.config.ts (expect all packages)
@@ -43,6 +43,7 @@ against the budget and catch template bugs. It holds no product code; keep chang
 - 2026-10-15 · 2 · https://github.com/keelstackhq/example-app (main) · project.md written; `pnpm run ci` exit 0, 21/21 tasks, cold · 12.6 s
 - 2026-10-15 · 3 · https://github.com/keelstackhq/example-app/settings · blocked: agent has no repo-admin tools (see Blocked) · -
 - 2026-10-15 · 4 · https://github.com/keelstackhq/example-app/actions/runs/38796201776 · green, full run (no base) · ci 47 s, ci-ok 3 s
+- 2026-10-15 · 5 · https://github.com/keelstackhq/example-app/pull/1 · green, early exit (affected check 7 s, rest skipped); 1 s over budget, the time is in npx downloading turbo for "query affected" · ci 16 s, ci-ok 3 s
 
 ## Blocked
 
