@@ -27,7 +27,7 @@ against the budget and catch template bugs. It holds no product code; keep chang
 - [x] 1 Render web combo, single vite ok
 - [x] 2 project.md written, `pnpm run ci` green locally, main pushed
 - [ ] 3 GitHub settings (branch protection on ci-ok, Renovate, optional Cloudflare secrets)
-- [ ] 4 First CI run on main green
+- [x] 4 First CI run on main green
 - [ ] 5 PR docs only (expect early exit, <= 15 s)
 - [ ] 6 PR one package: apps/web (expect web only, <= 45 s)
 - [ ] 7 PR shared UI: packages/ui (expect ui + web)
@@ -41,7 +41,16 @@ against the budget and catch template bugs. It holds no product code; keep chang
 
 - 2026-10-15 · 1 · keelstackhq/hull@efc8d9e · render ok:true, exit 0, 66 changes; `ok: single vite (@voidzero-dev/vite-plus-core@1.1.0)` (Node 24.22.0, pnpm 12.11.2) · install 12.6 s
 - 2026-10-15 · 2 · https://github.com/keelstackhq/example-app (main) · project.md written; `pnpm run ci` exit 0, 21/21 tasks, cold · 12.6 s
+- 2026-10-15 · 3 · https://github.com/keelstackhq/example-app/settings · blocked: agent has no repo-admin tools (see Blocked) · -
+- 2026-10-15 · 4 · https://github.com/keelstackhq/example-app/actions/runs/38796201776 · green, full run (no base) · ci 47 s, ci-ok 3 s
 
 ## Blocked
 
 <!-- what is missing and the exact action a human must take -->
+
+- Repo settings (admin on keelstackhq/example-app): Settings → Actions → General: allow actions,
+  workflow permissions "Read repository contents".
+- Branch protection: protect `main`, require only the `ci-ok` status check (merge queue optional).
+- Renovate: install the Renovate GitHub app on keelstackhq/example-app; give it read access to
+  keelstackhq/hull if hull is private.
+- Optional: repo secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` for PR previews.
