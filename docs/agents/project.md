@@ -60,3 +60,10 @@ against the budget and catch template bugs. It holds no product code; keep chang
 - Renovate: install the Renovate GitHub app on keelstackhq/example-app; give it read access to
   keelstackhq/hull if hull is private.
 - Optional: repo secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` for PR previews.
+
+## Org decisions
+
+Cross-repo decisions from keelstackhq/decisions; follow them. To change one, open a PR there.
+The hook refreshes this snapshot; commit an update alone as `chore: sync org decisions`.
+
+@docs/agents/org-decisions.md
