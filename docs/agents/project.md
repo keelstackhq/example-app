@@ -49,6 +49,8 @@ against the budget and catch template bugs. It holds no product code; keep chang
 - 2026-10-15 · 8 · https://github.com/keelstackhq/example-app/pull/4 · green, matched: all 5 packages, 21 tasks, 0 cached, turbo 18.1 s · ci 51 s, ci-ok 4 s
 - 2026-10-15 · 9 · hull scripts/ci-timing.mjs --repo keelstackhq/example-app --budget 45 --limit 20 · n=4 p50=29s p90=51s, ok (exit 0) · -
 - 2026-10-15 · 10 · https://claude.ai/code/artifact/5cded5ba-c915-4680-b9c6-a206522e3041 · report posted as a doc comment · -
+- 2026-10-16 · update · https://github.com/keelstackhq/example-app/pull/7 · template-owned ci.yml + session-start.sh from keelstackhq/hull@e485214 (turbo via curl, session-start.d) · ci 30 s
+- 2026-10-16 · 5 (re-run) · https://github.com/keelstackhq/example-app/pull/8 · green, early exit; affected step 1.1 s (turbo via curl, was npx), within budget · ci 7 s (was 16 s), ci-ok 4 s
 
 ## Blocked
 
