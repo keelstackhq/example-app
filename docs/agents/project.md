@@ -63,9 +63,13 @@ against the budget and catch template bugs. It holds no product code; keep chang
   keelstackhq/hull if hull is private.
 - Optional: repo secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` for PR previews.
 
+<!-- splice:decisions:begin — managed by `splice update --channel decisions`; edit the source -->
+
 ## Org decisions
 
 Cross-repo decisions from keelstackhq/decisions; follow them. To change one, open a PR there.
-The hook refreshes this snapshot; commit an update alone as `chore: sync org decisions`.
+`splice update --channel decisions` refreshes this snapshot; commit it alone as `chore: sync org decisions`.
 
 @docs/agents/org-decisions.md
+
+<!-- splice:decisions:end -->
