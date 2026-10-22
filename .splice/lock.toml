@@ -3,8 +3,8 @@ splice = "0.2.0"
 
 [template]
 source = "gh:keelstackhq/hull//template"
-version = "0.2.0"
-commit = "8f7eea272a6b0a792444eb076f331dbfc7c2fa15"
+version = "0.2.1"
+commit = "5571be1fb207ec308cdadc267125908926297fb4"
 
 [vars]
 scope = "keelstackhq"
@@ -46,7 +46,7 @@ vars = { name = "api" }
 ".github/workflows/release.yml" = { class = "owned", sha256 = "b91cd3c5b28f40f735ed2b171533832eeaabc5d0d55f94205c28aa0bac305284" }
 ".gitignore" = { class = "owned", sha256 = "a558881a97fff2285801fe9f96ad521793bf8302f1510f496958aca653a7d0df" }
 ".node-version" = { class = "owned", sha256 = "68ca3fba3b7e864770cb61aeb306d4bd4354b68ab4dd38450860c5d823e42a53" }
-"CLAUDE.md" = { class = "owned", sha256 = "8aa2262f7aec2bbb8446276233a57c07b8c5744e5d4fa75816875492303091b3" }
+"CLAUDE.md" = { class = "owned", sha256 = "f05dea4c3e9e8696f7786f22c94a79eab7ad4146ce861c45f5022f6608ffab8d" }
 "apps/api/AGENTS.md" = { class = "owned", sha256 = "008040049e5b93ca24e39e7f9b41c0feaa492242d8528d75295ac843c8bfcb27" }
 "apps/api/package.json" = { class = "shared", sha256 = "757b28f6284e99f6289fbd3a06cf66141ee77cac40df0fc54a3dbde81f8379fb" }
 "apps/api/src/hull/logging.test.ts" = { class = "owned", sha256 = "4e803751dedee22888481193d64096abe330b7a02dd948b82310a88079f51845" }
