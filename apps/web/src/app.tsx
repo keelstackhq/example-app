@@ -1,3 +1,4 @@
+// Canary app: one-line edits here re-measure CI (hull v0.2.1, hoard cache).
 import { Button, Card } from "@cascivo/react";
 import { useState } from "preact/hooks";
 
