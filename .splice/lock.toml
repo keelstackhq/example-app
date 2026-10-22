@@ -3,8 +3,8 @@ splice = "0.2.0"
 
 [template]
 source = "gh:keelstackhq/hull//template"
-version = "0.1.1"
-commit = "77dea3caeaea10cd9d7bac0eeb7da401be5636eb"
+version = "0.2.0"
+commit = "8f7eea272a6b0a792444eb076f331dbfc7c2fa15"
 
 [vars]
 scope = "keelstackhq"
@@ -30,10 +30,6 @@ name = "api"
 vars = { name = "api" }
 
 [files]
-".claude/agents/ci-fixer.md" = { class = "owned", sha256 = "f94d540c34c60555ee6dfea87f5f2a4c16f1a067499a1578ff5a09ec11d41003" }
-".claude/agents/explore.md" = { class = "owned", sha256 = "b7294f5f7e87b694e28a93036e9c2aac639808f015f5a08b31ef2c7c1289d2dd" }
-".claude/agents/implementer.md" = { class = "owned", sha256 = "e81bb351b8819cd1e2f1b7bf33680b0236957f097418e806d94743ebbaad3e4f" }
-".claude/agents/reviewer.md" = { class = "owned", sha256 = "a8d9d26431c38fa34bf1e36cc7a5acc453b4412b7ef454c7339efebdb56ac0ac" }
 ".claude/hooks/guard.mjs" = { class = "owned", sha256 = "4440b47b1fa883ea7365608a5b188d28633be3036b66f1842a28645159f81fc0" }
 ".claude/hooks/session-start.sh" = { class = "owned", sha256 = "6170fb738fc66c1383aca591aa31dfc0ab626468d555241e094159f90b5f3a4b" }
 ".claude/hooks/stop-checks.sh" = { class = "owned", sha256 = "7a60f9c7bbd5e756b2bdb01ea8010740e880deadf1016a283a3136b8a548e890" }
@@ -45,12 +41,12 @@ vars = { name = "api" }
 ".gitattributes" = { class = "owned", sha256 = "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c" }
 ".github/scripts/affected.mjs" = { class = "owned", sha256 = "ecd459229027d750d24f39b9e4177cc6ba46a25193228c2801756c2edd7548e7" }
 ".github/scripts/release-plan.mjs" = { class = "owned", sha256 = "b6db9827b1e283f0e580e2da0e930128148656c7808c3fa33c2179df6fa81973" }
-".github/workflows/ci.yml" = { class = "owned", sha256 = "dcd4edf4ee6507974ce70c99b546b6f9c4c78f3b9a4e6b5fc90f9521fc47ad85" }
+".github/workflows/ci.yml" = { class = "owned", sha256 = "a0cbe849aee4aa33d90f8beefb7a27547c74db7c17b4f3d00a838b1f113b98cb" }
 ".github/workflows/preview.yml" = { class = "owned", sha256 = "800f4fa1db90d1afe261873d37613c6fec60634468ffed16c8b383adbd89de27" }
 ".github/workflows/release.yml" = { class = "owned", sha256 = "b91cd3c5b28f40f735ed2b171533832eeaabc5d0d55f94205c28aa0bac305284" }
 ".gitignore" = { class = "owned", sha256 = "a558881a97fff2285801fe9f96ad521793bf8302f1510f496958aca653a7d0df" }
 ".node-version" = { class = "owned", sha256 = "68ca3fba3b7e864770cb61aeb306d4bd4354b68ab4dd38450860c5d823e42a53" }
-"CLAUDE.md" = { class = "owned", sha256 = "7dc130e451956bcdc38d110e46acff61f7c1ab9eb9d207c1553aac86800d64c3" }
+"CLAUDE.md" = { class = "owned", sha256 = "8aa2262f7aec2bbb8446276233a57c07b8c5744e5d4fa75816875492303091b3" }
 "apps/api/AGENTS.md" = { class = "owned", sha256 = "008040049e5b93ca24e39e7f9b41c0feaa492242d8528d75295ac843c8bfcb27" }
 "apps/api/package.json" = { class = "shared", sha256 = "757b28f6284e99f6289fbd3a06cf66141ee77cac40df0fc54a3dbde81f8379fb" }
 "apps/api/src/hull/logging.test.ts" = { class = "owned", sha256 = "4e803751dedee22888481193d64096abe330b7a02dd948b82310a88079f51845" }
