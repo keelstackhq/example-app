@@ -27,6 +27,8 @@ jobs:
         with:
           fetch-depth: 0
           filter: blob:none
+      - name: Agents index current?
+        run: node scripts/agents-index.mjs --check
       - name: Anything affected?
         id: affected
         env:
@@ -54,13 +56,9 @@ jobs:
       - name: Install
         if: steps.affected.outputs.skip != 'true'
         run: pnpm install --frozen-lockfile --prefer-offline
-      - uses: actions/cache@v4
+      # Turborepo remote cache in the GitHub Actions cache; exports TURBO_API/TURBO_TOKEN/TURBO_TEAM
+      - uses: keelstackhq/hoard@v0
         if: steps.affected.outputs.skip != 'true'
-        with:
-          path: .turbo/cache
-          key: turbo-${{ runner.os }}-${{ github.sha }}
-          restore-keys: |
-            turbo-${{ runner.os }}-
       - name: Rust affected?
         id: rust
         if: steps.affected.outputs.skip != 'true' && hashFiles('.github/scripts/rust-affected.mjs') != ''
@@ -75,16 +73,18 @@ jobs:
             echo "::warning::turbo query affected --packages failed (exit $code); running Rust steps"
             echo "rust=true" >> "$GITHUB_OUTPUT"
           fi
-      - uses: dtolnay/rust-toolchain@stable
+      - name: Rust toolchain (from rust-toolchain.toml)
+        id: toolchain
         if: steps.affected.outputs.skip != 'true' && steps.rust.outputs.rust == 'true'
-        with:
-          components: clippy, rustfmt
+        run: rustup toolchain install
       - uses: Swatinem/rust-cache@v2
         if: steps.affected.outputs.skip != 'true' && steps.rust.outputs.rust == 'true'
+        with:
+          key: ${{ hashFiles('rust-toolchain.toml') }}
       - uses: taiki-e/install-action@v2
         if: steps.affected.outputs.skip != 'true' && steps.rust.outputs.rust == 'true'
         with:
-          tool: cargo-nextest
+          tool: cargo-nextest@0.9.148,cargo-deny@0.20.2
       - name: Run affected tasks
         if: steps.affected.outputs.skip != 'true'
         run: pnpm turbo run lint format:check typecheck test build --affected --output-logs=errors-only
