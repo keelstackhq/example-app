@@ -52,6 +52,8 @@ against the budget and catch template bugs. It holds no product code; keep chang
 - 2026-10-16 · update · https://github.com/keelstackhq/example-app/pull/7 · template-owned ci.yml + session-start.sh from keelstackhq/hull@e485214 (turbo via curl, session-start.d) · ci 30 s
 - 2026-10-16 · 5 (re-run) · https://github.com/keelstackhq/example-app/pull/8 · green, early exit; affected step 1.1 s (turbo via curl, was npx), within budget · ci 7 s (was 16 s), ci-ok 4 s
 - 2026-10-22 · splice bot · .github/workflows/splice.yml (keelstackhq/splice/action@v1, scope all, splice 0.2.0) · no .splice/lock.toml: `--all` updates only the decisions channel, main is skipped silently (`scope: main` would exit 2) · -
+- 2026-10-22 · adopt · https://github.com/keelstackhq/example-app/pull/11 · main lock via `splice new --ref v0.1.1 --force` → `update` v0.2.0 → `channel add gh:keelstackhq/hull//rigging --piece claude` → `update` v0.2.1 (5571be1); `splice check` 0; bot dispatch after merge: up to date, no PR · ci 39 s (all packages, cold), ci-ok 3 s
+- 2026-10-22 · 6 (re-run) · https://github.com/keelstackhq/example-app/pull/12 · green, web only, 6 tasks, 1 cached via keelstackhq/hoard@v0 remote cache (`hoard vp restore: no cache found`), turbo 3.7 s; ci-timing.mjs --budget 45: n=13 p50=23s p90=39s, ok; `preview` red (not required): Workers never deployed, `wrangler versions upload` needs a first `wrangler deploy` · ci 23 s, ci-ok 2 s
 
 ## Blocked
 
