@@ -3,8 +3,8 @@ splice = "0.2.0"
 
 [template]
 source = "gh:keelstackhq/hull//template"
-version = "0.2.1"
-commit = "5571be1fb207ec308cdadc267125908926297fb4"
+version = "0.2.2"
+commit = "2457b01364f2ef19a91fa6ff29475c682aab98ba"
 
 [vars]
 scope = "keelstackhq"
@@ -40,21 +40,22 @@ vars = { name = "api" }
 ".claude/statusline.sh" = { class = "owned", sha256 = "64a11fef7527d0fda66333a97403382cac278ca4013a2b597729820f400747e9" }
 ".gitattributes" = { class = "owned", sha256 = "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c" }
 ".github/scripts/affected.mjs" = { class = "owned", sha256 = "ecd459229027d750d24f39b9e4177cc6ba46a25193228c2801756c2edd7548e7" }
+".github/scripts/preview.mjs" = { class = "owned", sha256 = "954a249058d6ddda7aaf469e56dcdf6cab5b3c6c62b86136439f4add15e58ec3" }
 ".github/scripts/release-plan.mjs" = { class = "owned", sha256 = "b6db9827b1e283f0e580e2da0e930128148656c7808c3fa33c2179df6fa81973" }
 ".github/workflows/ci.yml" = { class = "owned", sha256 = "a0cbe849aee4aa33d90f8beefb7a27547c74db7c17b4f3d00a838b1f113b98cb" }
-".github/workflows/preview.yml" = { class = "owned", sha256 = "800f4fa1db90d1afe261873d37613c6fec60634468ffed16c8b383adbd89de27" }
+".github/workflows/preview.yml" = { class = "owned", sha256 = "ee6ad76d71b3118ce888cea51d9e334910b761f27c0d8e24a50f82c7f35b5391" }
 ".github/workflows/release.yml" = { class = "owned", sha256 = "b91cd3c5b28f40f735ed2b171533832eeaabc5d0d55f94205c28aa0bac305284" }
 ".gitignore" = { class = "owned", sha256 = "a558881a97fff2285801fe9f96ad521793bf8302f1510f496958aca653a7d0df" }
 ".node-version" = { class = "owned", sha256 = "68ca3fba3b7e864770cb61aeb306d4bd4354b68ab4dd38450860c5d823e42a53" }
 "CLAUDE.md" = { class = "owned", sha256 = "f05dea4c3e9e8696f7786f22c94a79eab7ad4146ce861c45f5022f6608ffab8d" }
-"apps/api/AGENTS.md" = { class = "owned", sha256 = "008040049e5b93ca24e39e7f9b41c0feaa492242d8528d75295ac843c8bfcb27" }
+"apps/api/AGENTS.md" = { class = "owned", sha256 = "42db79702ec7a7b485979790dce011d96fddba7663b9305aaa637ee554f002e5" }
 "apps/api/package.json" = { class = "shared", sha256 = "757b28f6284e99f6289fbd3a06cf66141ee77cac40df0fc54a3dbde81f8379fb" }
 "apps/api/src/hull/logging.test.ts" = { class = "owned", sha256 = "4e803751dedee22888481193d64096abe330b7a02dd948b82310a88079f51845" }
 "apps/api/src/hull/logging.ts" = { class = "owned", sha256 = "daae408bc0cce0391c85e622df01a955d1829ee78c5e081a8edcc13a039a0783" }
 "apps/api/src/hull/sentry.ts" = { class = "owned", sha256 = "1d02ac2d35827173ae11409abeb0ce7f376ab20fe0807d90ded36f4be5ea9941" }
 "apps/api/tsconfig.json" = { class = "owned", sha256 = "e93bc391ccd1a4d80916e9bde5268b4263d1f1728001742824b533409c4c0db5" }
 "apps/api/wrangler.jsonc" = { class = "shared", sha256 = "3885ba29d3bbd44cdf7fac441e2169b32968b4874f133a555af7d6c46fcd9053" }
-"apps/web/AGENTS.md" = { class = "owned", sha256 = "4ae8ae36140ca5477f66fd89929c79c56d6d4e621774f707d6d522580ddb2f90" }
+"apps/web/AGENTS.md" = { class = "owned", sha256 = "900029eba7c0631be828ed82d3821915c03b9ed1e9c7c83c8de27e090d9cc63d" }
 "apps/web/package.json" = { class = "shared", sha256 = "38fc7cbaae48d66a86db154f4e9d1e119cc375e66256fe32ad2e2362e97902c2" }
 "apps/web/tsconfig.json" = { class = "owned", sha256 = "86a4e0ef3de16b0a904ab3e35f1a50d06782df7db7283ef2bcfc04f5134f9c91" }
 "apps/web/vite.config.ts" = { class = "owned", sha256 = "6466238624d7d748c312a725b09a838d86e8adeee834e72d1fbb85486ee5972d" }
