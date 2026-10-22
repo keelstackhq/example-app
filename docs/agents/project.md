@@ -51,6 +51,7 @@ against the budget and catch template bugs. It holds no product code; keep chang
 - 2026-10-15 · 10 · https://claude.ai/code/artifact/5cded5ba-c915-4680-b9c6-a206522e3041 · report posted as a doc comment · -
 - 2026-10-16 · update · https://github.com/keelstackhq/example-app/pull/7 · template-owned ci.yml + session-start.sh from keelstackhq/hull@e485214 (turbo via curl, session-start.d) · ci 30 s
 - 2026-10-16 · 5 (re-run) · https://github.com/keelstackhq/example-app/pull/8 · green, early exit; affected step 1.1 s (turbo via curl, was npx), within budget · ci 7 s (was 16 s), ci-ok 4 s
+- 2026-10-22 · splice bot · .github/workflows/splice.yml (keelstackhq/splice/action@v1, scope all, splice 0.2.0) · no .splice/lock.toml: `--all` updates only the decisions channel, main is skipped silently (`scope: main` would exit 2) · -
 
 ## Blocked
 
